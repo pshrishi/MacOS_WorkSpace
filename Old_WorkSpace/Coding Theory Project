@@ -1,0 +1,13 @@
+This zip package contains two files: 
+
+-codingTheory.java: 	Takes 'k' nad 'n' as input, and the corresponding generator matrix(row-major).
+						Produces:
+							-All codewords
+							-Weights of all codewords
+							-Weight enumerator polynomial
+							-Minimum distance 'd' for the code
+
+-table.java:		Takes 'm' i.e. the power of 2 as input
+						Produces:
+							-Addition modulo table for galois field(2^m)
+							-Multiplication modulo table for galois field(2^m)						

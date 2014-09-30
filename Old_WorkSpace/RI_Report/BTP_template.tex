@@ -1,0 +1,729 @@
+
+%% bare_jrnl.tex
+%% V1.2
+%% 2002/11/18
+%% by Michael Shell
+%% mshell@ece.gatech.edu
+%%
+%% NOTE: This text file uses MS Windows line feed conventions. When (human)
+%% reading this file on other platforms, you may have to use a text
+%% editor that can handle lines terminated by the MS Windows line feed
+%% characters (0x0D 0x0A).
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.6b or later) with an IEEE journal paper.
+%%
+%% Support sites:
+%% http://www.ieee.org
+%% and/or
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
+%%
+%% This code is offered as-is - no warranty - user assumes all risk.
+%% Free to use, distribute and modify.
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% Testflow can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/testflow
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print. Authors are encouraged to use U.S. letter paper when 
+% submitting to IEEE. Use the testflow package mentioned above to verify
+% correct handling of both paper sizes by the author's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+% This example can be formatted using the peerreview
+% (instead of journal) mode.
+\documentclass[journal]{IEEEtran}
+% If the IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it:
+% \documentclass[journal]{../sty/IEEEtran}
+
+
+% some very useful LaTeX packages include:
+
+%\usepackage{cite}      % Written by Donald Arseneau
+                        % V1.6 and later of IEEEtran pre-defines the format
+                        % of the cite.sty package \cite{} output to follow
+                        % that of IEEE. Loading the cite package will
+                        % result in citation numbers being automatically
+                        % sorted and properly "ranged". i.e.,
+                        % [1], [9], [2], [7], [5], [6]
+                        % (without using cite.sty)
+                        % will become:
+                        % [1], [2], [5]--[7], [9] (using cite.sty)
+                        % cite.sty's \cite will automatically add leading
+                        % space, if needed. Use cite.sty's noadjust option
+                        % (cite.sty V3.8 and later) if you want to turn this
+                        % off. cite.sty is already installed on most LaTeX
+                        % systems. The latest version can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/cite/
+
+\usepackage{graphicx}  % Written by David Carlisle and Sebastian Rahtz
+                        % Required if you want graphics, photos, etc.
+                        % graphicx.sty is already installed on most LaTeX
+                        % systems. The latest version and documentation can
+                        % be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+                        % Another good source of documentation is "Using
+                        % Imported Graphics in LaTeX2e" by Keith Reckdahl
+                        % which can be found as esplatex.ps and epslatex.pdf
+                        % at: http://www.ctan.org/tex-archive/info/
+% NOTE: for dual use with latex and pdflatex, instead load graphicx like:
+%\ifx\pdfoutput\undefined
+\usepackage{graphicx}
+%\else
+%\usepackage[pdftex]{graphicx}
+%\fi
+
+% However, be warned that pdflatex will require graphics to be in PDF
+% (not EPS) format and will preclude the use of PostScript based LaTeX
+% packages such as psfrag.sty and pstricks.sty. IEEE conferences typically
+% allow PDF graphics (and hence pdfLaTeX). However, IEEE journals do not
+% (yet) allow image formats other than EPS or TIFF. Therefore, authors of
+% journal papers should use traditional LaTeX with EPS graphics.
+%
+% The path(s) to the graphics files can also be declared: e.g.,
+\graphicspath{{../eps/}{../ps/}}
+% if the graphics files are not located in the same directory as the
+% .tex file. This can be done in each branch of the conditional above
+% (after graphicx is loaded) to handle the EPS and PDF cases separately.
+% In this way, full path information will not have to be specified in
+% each \includegraphics command.
+%
+% Note that, when switching from latex to pdflatex and vice-versa, the new
+% compiler will have to be run twice to clear some warnings.
+
+
+\usepackage{psfrag}    % Written by Craig Barratt, Michael C. Grant,
+                        % and David Carlisle
+                        % This package allows you to substitute LaTeX
+                        % commands for text in imported EPS graphic files.
+                        % In this way, LaTeX symbols can be placed into
+                        % graphics that have been generated by other
+                        % applications. You must use latex->dvips->ps2pdf
+                        % workflow (not direct pdf output from pdflatex) if
+                        % you wish to use this capability because it works
+                        % via some PostScript tricks. Alternatively, the
+                        % graphics could be processed as separate files via
+                        % psfrag and dvips, then converted to PDF for
+                        % inclusion in the main file which uses pdflatex.
+                        % Docs are in "The PSfrag System" by Michael C. Grant
+                        % and David Carlisle. There is also some information 
+                        % about using psfrag in "Using Imported Graphics in
+                        % LaTeX2e" by Keith Reckdahl which documents the
+                        % graphicx package (see above). The psfrag package
+                        % and documentation can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/psfrag/
+
+%\usepackage{subfigure} % Written by Steven Douglas Cochran
+                        % This package makes it easy to put subfigures
+                        % in your figures. i.e., "figure 1a and 1b"
+                        % Docs are in "Using Imported Graphics in LaTeX2e"
+                        % by Keith Reckdahl which also documents the graphicx
+                        % package (see above). subfigure.sty is already
+                        % installed on most LaTeX systems. The latest version
+                        % and documentation can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/subfigure/
+
+\usepackage{url}       % Written by Donald Arseneau
+                        % Provides better support for handling and breaking
+                        % URLs. url.sty is already installed on most LaTeX
+                        % systems. The latest version can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/other/misc/
+                        % Read the url.sty source comments for usage information.
+
+%\usepackage{stfloats}  % Written by Sigitas Tolusis
+                        % Gives LaTeX2e the ability to do double column
+                        % floats at the bottom of the page as well as the top.
+                        % (e.g., "\begin{figure*}[!b]" is not normally
+                        % possible in LaTeX2e). This is an invasive package
+                        % which rewrites many portions of the LaTeX2e output
+                        % routines. It may not work with other packages that
+                        % modify the LaTeX2e output routine and/or with other
+                        % versions of LaTeX. The latest version and
+                        % documentation can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/sttools/
+                        % Documentation is contained in the stfloats.sty
+                        % comments as well as in the presfull.pdf file.
+                        % Do not use the stfloats baselinefloat ability as
+                        % IEEE does not allow \baselineskip to stretch.
+                        % Authors submitting work to the IEEE should note
+                        % that IEEE rarely uses double column equations and
+                        % that authors should try to avoid such use.
+                        % Do not be tempted to use the cuted.sty or
+                        % midfloat.sty package (by the same author) as IEEE
+                        % does not format its papers in such ways.
+
+%\usepackage{amsmath}   % From the American Mathematical Society
+                        % A popular package that provides many helpful commands
+                        % for dealing with mathematics. Note that the AMSmath
+                        % package sets \interdisplaylinepenalty to 10000 thus
+                        % preventing page breaks from occurring within multiline
+                        % equations. Use:
+%\interdisplaylinepenalty=2500
+                        % after loading amsmath to restore such page breaks
+                        % as IEEEtran.cls normally does. amsmath.sty is already
+                        % installed on most LaTeX systems. The latest version
+                        % and documentation can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+% Other popular packages for formatting tables and equations include:
+
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty which improves the
+% LaTeX2e array and tabular environments to provide better appearances and
+% additional user controls. array.sty is already installed on most systems.
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+% Mark Wooding's extremely powerful MDW tools, especially mdwmath.sty and
+% mdwtab.sty which are used to format equations and tables, respectively.
+% The MDWtools set is already installed on most LaTeX systems. The lastest
+% version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/mdwtools/
+
+
+% V1.6 of IEEEtran contains the IEEEeqnarray family of commands that can
+% be used to generate multiline equations as well as matrices, tables, etc.
+
+
+% Also of notable interest:
+
+% Scott Pakin's eqparbox package for creating (automatically sized) equal
+% width boxes. Available:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/eqparbox/
+
+
+
+% Notes on hyperref:
+% IEEEtran.cls attempts to be compliant with the hyperref package, written
+% by Heiko Oberdiek and Sebastian Rahtz, which provides hyperlinks within
+% a document as well as an index for PDF files (produced via pdflatex).
+% However, it is a tad difficult to properly interface LaTeX classes and
+% packages with this (necessarily) complex and invasive package. It is
+% recommended that hyperref not be used for work that is to be submitted
+% to the IEEE. Users who wish to use hyperref *must* ensure that their
+% hyperref version is 6.72u or later *and* IEEEtran.cls is version 1.6b
+% or later. The latest version of hyperref can be obtained at:
+%
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/hyperref/
+%
+% Also, be aware that cite.sty (as of version 3.9, 11/2001) and hyperref.sty
+% (as of version 6.72t, 2002/07/25) do not work optimally together.
+% To mediate the differences between these two packages, IEEEtran.cls, as
+% of v1.6b, predefines a command that fools hyperref into thinking that
+% the natbib package is being used - causing it not to modify the existing
+% citation commands, and allowing cite.sty to operate as normal. However,
+% as a result, citation numbers will not be hyperlinked. Another side effect
+% of this approach is that the natbib.sty package will not properly load
+% under IEEEtran.cls. However, current versions of natbib are not capable
+% of compressing and sorting citation numbers in IEEE's style - so this
+% should not be an issue. If, for some strange reason, the user wants to
+% load natbib.sty under IEEEtran.cls, the following code must be placed
+% before natbib.sty can be loaded:
+%
+% \makeatletter
+% \let\NAT@parse\undefined
+% \makeatother
+%
+% Hyperref should be loaded differently depending on whether pdflatex
+% or traditional latex is being used:
+%
+%\ifx\pdfoutput\undefined
+%\usepackage[hypertex]{hyperref}
+%\else
+%\usepackage[pdftex,hypertexnames=false]{hyperref}
+%\fi
+%
+% Pdflatex produces superior hyperref results and is the recommended
+% compiler for such use.
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+\title{Sample BTP Report for A4 Page Size}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+
+\author{First student1,Second student2% <-this % stops a space
+	%\thanks{Manuscript received January 20, 2002; revised November 18, 2002.
+       % This work was supported by the IEEE.}% <-this % stops a space
+	%\thanks{M. Shell is with the Georgia Institute of Technology.}
+	\\ \emph{DA-IICT,\ Gandhinagar}\\
+	\{ID1, ID2\}@daiict.ac.in\\
+%	student2\_ID@daiict.ac.in\\
+	\newline \textbf{Supervisor}\\
+	\emph{Name of the Supervisor}\\
+	Off-Campus Supervisor (only if applicable)\\
+	\emph{Name of the company with address}
+	}
+% note the % following the last \IEEEmembership and also the first \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "A\textbf{} \textbf{}B" will typeset as "A B" not "AB". If you want
+% "AB" then you have to do: "A\textbf{}\textbf{}B"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+%
+
+
+% The paper headers
+\markboth{This Report is Submitted in the partial fulfillment of the requirements towards the award of B.Tech. (ICT) degree, 2012.}{}
+%	\markboth{Journal of \LaTeX\ Class Files,~Vol.~1, No.~11,~November~2002}{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's name in ***
+% *** the headers of peer review papers.                                   ***
+
+% If you want to put a publisher's ID mark on the page
+% (can leave text blank if you just want to see how the
+% text height on the first page will be reduced by IEEE)
+%\pubid{0000--0000/00\$00.00~\copyright~2002 IEEE}
+
+% use only for invited papers
+%\specialpapernotice{(Invited Paper)}
+% make the title area
+
+\maketitle
+
+
+\begin{abstract}
+This document gives formatting instructions for students preparing BTP Reports as a mandatory requirement for their BTP course. The students must follow the instructions given in this document for their respective reports. You can use this document as both an instruction set and as a template into which you can type your own text.
+\end{abstract}
+
+\begin{keywords}
+Include at least 5 keywords or phrases.
+\end{keywords}
+% Note that keywords are not normally used for peerreview papers.
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+%
+% For peerreview papers, inserts a page break and creates the second title.
+% Will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{INTRODUCTION}
+% The very first letter is a 2 line initial drop letter followed
+% by the rest of the first word in caps.
+% 
+% form to use if the first word consists of a single letter:
+% \PARstart{A}{demo} file is ....
+% 
+% form to use if you need the single drop letter followed by
+% normal text (unknown if ever used by IEEE):
+% \PARstart{A}{}demo file is ....
+% 
+% Some journals put the first two words in caps:
+% \PARstart{T}{his demo} file is ....
+% 
+% Here we have the typical use of a "T" for an initial drop letter
+% and "HIS" in caps to complete the first word.
+	%\PARstart{}{}
+This document is a template. An electronic copy can be downloaded from the BTP website (\url{https://uspmes.daiict.ac.in/btpsite}).  For questions on report writing guidelines, please contact your Respective supervisor. Off-Campus students may contact their respective On-Campus mentors.
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+% May all your publication endeavors be successful.
+
+	%\hfill mds
+ 
+	%\hfill November 18, 2002
+\section{PAGE LAYOUT}
+An easy way to comply with the BTP report formatting requirements is to use this document as a template and simply type your text into it.
+
+\subsection{Page Layout}
+Your paper must use an A4 size page of 210mm wide and 297 mm long (8.27"$\times$11.69"). The margins must be set as follows:
+\begin{itemize}
+\item Top = 19mm (0.75")
+\item Bottom = 43mm (1.69")
+\item Left = Right = 14.32mm (0.56")
+\end{itemize}
+Your paper must be in two column format with a space of 4.22mm (0.17") between columns.
+
+\subsection{Declaration}
+It is compulsory to write ``This Report is Submitted in the partial fulfillment of the requirements towards the award of B.Tech. (ICT) degree, 2012." in the Header.
+\section{PAGE STYLE}
+All paragraphs must be indented. All paragraphs must be fully justified, \emph{i.e.}, both left-justified and right-justified.
+\subsection{Text Font of Entire Document}
+The entire document should be in Times New Roman or Times font.  Type 3 fonts must not be used.  Other font types may be used if needed for special purposes.\\ \\
+Recommended font sizes are shown in Table 1.
+\subsection{Title and Student Details}
+Title must be in 24 pt Regular font.Student name must be in 11 pt Regular font.Student affiliation must be in 10 pt Italic. Email address must be in 9 pt Courier Regular font.Students doing Off-Campus BTP must include their Off-Campus Supervisors' names in 9 pt Courier Regular font and their addresses, including company names, in 10 pt Italic Times New Roman or Times font.\\
+
+% needed in second column of first page if using \pubid
+%\pubidadjcol
+
+	%\subsubsection{Subsubsection Heading Here}
+	%Subsubsection text here.
+
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class option
+% should be used if it is desired that the figures are to be displayed while
+% in draft mode.
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfigure.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfigure command, the
+% \label for the overall fgure must come after \caption.
+% \hfil must be used as a separator to get equal spacing
+%
+%\begin{figure*}
+%\centerline{\subfigure[Case I]{\includegraphics[width=2.5in]{subfigcase1}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex
+%\label{fig_first_case}}
+%\hfil
+%\subfigure[Case II]{\includegraphics[width=2.5in]{subfigcase2}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+
+
+
+% An example of a floating table. Note that, for IEEE style tables, the 
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+\begin{table}[h]
+%% increase table row spacing, adjust to taste
+\renewcommand{\arraystretch}{1.3}
+\caption{\textsc{FONT SIZES FOR PAPERS}}
+\label{}
+\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+\begin{tabular}{|p{.5cm}|p{2.5cm}|p{1.5cm}|p{3cm}|}
+\hline
+font size & regular & Bold & Italic \\
+\hline
+8 & table caption (in Small Caps), figure caption, reference item &  \  & reference item (partial)\\
+\hline
+9 & Student email address (in Courier), cell in a table & abstract body & abstract heading (also in Bold)\\
+\hline
+10 & level-1 heading (in Small Caps), paragraph & \ & level-2 heading,level-3 heading, author affiliation \\
+\hline
+10 & Supervisor name & \ & \ \\
+\hline
+11 & Student Name & \ & \ \\
+\hline
+24 & title & \ & \ \\
+\hline
+\end{tabular}
+\end{table}
+
+All title, student and supervisor(s) details must be in single-column format and must be centred.
+\newline
+
+Every word in a title must be capitalized except for short minor words such as ``a", ``an", ``and", ``as", ``at", ``by", ``for", ``from", ``if", ``in", ``into", ``on", ``or", ``of", ``the", ``to", ``with".
+\newline
+
+To avoid confusion, the family name must be written as the last part of each student name (\emph{e.g.}, Nemi Chand Mishra).
+\newline
+
+Affiliation line will only include Dhirubhai Ambani Institute of Information and Communication Technology, Gandhinagar.
+\newline
+
+Email address is compulsory for each student which will show the ID of the student.
+\newline
+
+The Off-Campus students must provide the name of the respective supervisor and his/her affiliation as shown.
+\subsection{Section Headings}
+Not more than 3 levels of headings should be used.  All headings must be in 10pt font.  Every word in a heading must be capitalized except for short minor words as listed in Section III-B.
+
+\subsubsection{Level-1 Heading}
+A level-1 heading must be in Small Caps, centred and numbered using uppercase Roman numerals.  For example, see heading ``III. Page Style" of this document.  The two level-1 headings which must not be numbered are ``Acknowledgment" and ``References".
+
+\subsubsection{Level-2 Heading}
+A level-2 heading must be in Italic, left-justified and numbered using an uppercase alphabetic letter followed by a period. For example, see heading ``C. Section Headings" above.
+
+\subsubsection{Level-3 Heading}
+A level-3 heading must be indented, in Italic and numbered with an Arabic numeral followed by a right parenthesis. The level-3 heading must end with a colon.  The body of the level-3 section immediately follows the level-3 heading in the same paragraph. For example, this paragraph begins with a level-3 heading.
+
+\subsection{Figures and Tables}
+Figures and tables must be centred in the column. Large figures and tables may span across both columns. Any table or figure that takes up more than 1 column width must be positioned either at the top or at the bottom of the page.\\
+\newline
+Graphics may be full colour. All colours will be retained on the CDROM. Please use only SOLID FILL colours which contrast well both on screen and on a black-and-white hardcopy, as shown in Fig. 1.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5in]{graph1}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex
+\caption{A sample histogram using colours which contrast well both on screen and on a black-and-white hardcopy}
+\label{fig_sim}
+\end{figure}
+
+Fig. 2 shows an example of a low-resolution image which would not be acceptable, whereas Fig. 3 shows an example of an image with adequate resolution. Check that the resolution is adequate to reveal the important detail in the figure.
+\newline
+
+Please check all figures in your paper both on screen and on a black-and-white hardcopy. When you check your paper on a black-and-white hardcopy, please ensure that:
+\begin{itemize}
+\item the colours used in each figure contrast well,
+\item the image used in each figure is clear,
+\item all text labels in each figure are legible.
+\end{itemize}
+
+\subsection{Figure Captions}
+Figures must be numbered using Arabic numerals. Figure captions must be in 8 pt Regular font. Captions of a single line (\emph{e.g.}, Fig. 2) must be centred whereas multi-line captions must be justified (\emph{e.g.}, Fig. 1). Captions with figure numbers must be placed after their associated figures, as shown in Fig. 1.
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5in]{low_res}
+\caption{Example of an unacceptable low-resolution image}
+\label{fig_sim}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5in]{high_res}
+\caption{Example of an image with acceptable resolution}
+\label{fig_sim}
+\end{figure}
+
+\subsection{Table Captions}
+Tables must be numbered using uppercase Roman numerals.  Table captions must be centred and in 8 pt Regular font with Small Caps. Every word in a table caption must be capitalized except for short minor words as listed in Section III-B.  Captions with table numbers must be placed before their associated tables, as shown in Table 1.
+
+\subsection{Page Numbers, Headers and Footers}
+Page numbers, headers and footers must not be used. There will be no indenting on a new paragraph.
+
+\subsection{Links and Bookmarks}
+All hypertext links and section bookmarks will be removed from papers during the processing of papers for publication.  If you need to refer to an Internet email address or URL in your paper, you must type out the address or URL fully in Regular font.
+
+\subsection{References}
+The heading of the References section must not be numbered.  All reference items must be in 8 pt font. Please use Regular and Italic styles to distinguish different fields as shown in the References section. Number the reference items consecutively in square brackets (\emph{e.g.}, [1]).\\
+\newline
+When referring to a reference item, please simply use the reference number, as in [2]. Do not use ``Ref. [3]" or ``Reference [3]" except at the beginning of a sentence, \emph{e.g.}, ``Reference [3] shows …". Multiple references are each numbered with separate brackets (\emph{e.g.}, [2], [3], [4]-[6]).\\
+\newline
+Special care must be taken while referring to some article in your report. Adequate references also save you from the fear of being caught for plagiarism, even though it is unintentional or inadvertent. Examples of reference items of different categories shown in the References section include:
+\begin{itemize}
+\item example of a book in [1]
+\item example of a book in a series in [2]
+\item example of a journal article in [3]
+\item example of a conference paper in [5]
+\item example of a patent in [6]
+\item example of a website in [7]
+\item example of a web page in [8]
+\item example of a databook as a manual in [9]
+\item example of a datasheet in [10]
+\item example of a master's thesis in [11]
+\item example of a technical report in [12]
+\item example of a standard in [13]
+\end{itemize}
+\section{PLAGIARISM}
+Plagiarism is an intentional or unintentional failure to indicate the source with quotation marks or footnotes or in reference section where appropriate if any of the following is reproduced in the work (project report, dissertation, thesis, synopsis, term paper, software, design etc.) submitted by a student:
+\begin{enumerate}
+\item A piece of musical.
+\item A graphic element.
+\item A proof of a technical work.
+\item A code of programming.
+\item An idea derived from the work, published or unpublished, of another person.
+\end{enumerate}
+
+We believe that this could be because of the lack of information and/or awareness of the student while submitting such work. Therefore we adopt a policy of considering several basic factors when evaluating a case of suspected plagiarism. These may include, but not limited to, amount or quantity (full paper, a section of a paper, a page, a paragraph, a sentence, phrases), use of quotation marks for all copied text, appropriate placement of credit notices, improper paraphrasing. Many a times we tend to do smart paraphrasing and think that we would skip the charge of plagiarism. But this may lead to more embarrassment if noticed. Paraphrasing often breaks the flow of the sentence if the author has changed only a few words or phrases or has only rearranged the original sentence order. Even a very cautious paraphrasing of the original text can lead to a charge of plagiarism if the original source is not properly acknowledged.\\
+\newline
+Typically there are five types of plagiarism [4] that are accepted worldwide and those are: i) Copy \& Paste Plagiarism, ii) Word Switch Plagiarism, iii) Style Plagiarism, iv) Metaphor Plagiarism and v) Idea Plagiarism. Since plagiarism is a subjective matter, we may adopt the policy of ``Plagiarism is plagiarism". Therefore to ensure consistency and fairness in our judgment the above mentioned types of plagiarism may be used as handy tool. DA-IICT may adopt the following IEEE guidelines for quantifying the degree of plagiarism if such cases get reported. We expect that the process of scaling and/or adjudication might mature with time and practice.
+
+\begin{itemize}
+\item Level One : uncredited verbatim copying of a full paper, or a major portion ( $\geq$ 50\%), or verbatim copying within more than one paper by the same author(s). 
+\item Level Two : uncredited verbatim copying of large portion (between 20 and 50\%) or verbatim copying within more than one paper by the same author(s).
+\item Level Three : uncredited verbatim copying of individual elements (Paragraph(s), Sentence(s),Illustration(s), etc.) resulting in a significant portion (up to 20\%) within a paper.
+\item Level Four : uncredited improper paraphrasing of pages or paragraphs.
+\item Level Five : credited verbatim copying of a major portion of a paper without clear delineation (e.g., quotes or indents).
+\end{itemize}
+
+\section{CONCLUSIONS}
+The version of this template is V1.  Most of the formatting instructions in this document have been compiled from IEEE template for conference papers. We would also try to provide template for LaTeX.  The advantage of preparing your report in LaTeX is that all reports could be compiled in one final document containing reports of the complete batch. We are attempting for that and expect that in near future, may be starting your batch itself, it would be put in place. You may find that production in LaTeX is a bit tedious, whereas the Microsoft Word template is self-contained.  We are trying our best to ensure that the templates have the same appearance.\\
+\newline
+Our preference is submission in LaTeX format.
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+% Use this command to get the appendices' numbers in "A", "B" instead of the
+% default capitalized Roman numerals ("I", "II", etc.).
+% However, the capital letter form may result in awkward subsection numbers
+% (such as "A-A"). Capitalized Roman numerals are the default.
+%\useRomanappendicesfalse
+%
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+
+% you can choose not to have a title for an appendix
+% if you want by leaving the argument blank
+%\section{}
+%Appendix two text goes here.
+
+% use section* for acknowledgement
+\section*{Acknowledgment}
+% optional entry into table of contents (if used)
+%\addcontentsline{toc}{section}{Acknowledgment}
+Please note that the heading of the Acknowledgment section and the References section must not be numbered.\\
+\newline
+The BTP Coordinator of academic year 2011-12 wishes to acknowledge Pankaj V. Dhalvaniya (201111008) for customizing this template to make report submission uniform.
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+% NOTE: BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% standard IEEE bibliography style from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/bibtex
+%\bibliographystyle{IEEEtran.bst}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+\bibitem{}
+S. M. Metev and V. P. Veiko, Laser Assisted Microtechnology, 2nd ed., R. M. Osgood, Jr., Ed.  Berlin, Germany: Springer-Verlag, 1998.
+\bibitem{}
+J. Breckling, Ed., The Analysis of Directional Time Series: Applications to Wind Speed and Direction, ser. Lecture Notes in Statistics.  Berlin, Germany: Springer, 1989, vol. 61.
+
+
+\bibitem{}
+S. Zhang, C. Zhu, J. K. O. Sin, and P. K. T. Mok, ``A novel ultrathin elevated channel low-temperature poly-Si TFT," IEEE Electron Device Lett., vol. 20, pp. 569-571, Nov. 1999.
+\bibitem{}
+Liles, Jeffrey A. and Michael E. Rozalski. ``It's a Matter of Style: A Style Manual Workshops for Preventing Plagiarism." College \& Undergraduate Libraries, vol. 11, no.2, pp. 91-101, 2004.
+\bibitem{}
+M. Wegmuller, J. P. von der Weid, P. Oberson, and N. Gisin, ``High resolution fiber distributed measurements with coherent OFDR," in Proc. ECOC'00, 2000, paper 11.3.4, p. 109.
+
+\bibitem{}
+R. E. Sorace, V. S. Reinhardt, and S. A. Vaughn, ``High-speed digital-to-RF converter," U.S. Patent 5 668 842, Sept. 16, 1997.
+\bibitem{}
+(2002) The IEEE website. [Online]. Available: \url{http://www.ieee.org/}
+\bibitem{}
+M. Shell. (2002) IEEEtran homepage on CTAN. [Online]. Available: \url{http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/}
+\bibitem{}
+FLEXChip Signal Processor (MC68175/D), Motorola, 1996.
+\bibitem{}
+``PDCA12-70 data sheet," Opto Speed SA, Mezzovico, Switzerland.
+\bibitem{}
+A. Karnik, ``Performance of TCP congestion control with rate feedback: TCP/ABR and rate adaptive TCP/IP," M. Eng. thesis, Indian Institute of Science, Bangalore, India, Jan. 1999.
+\bibitem{}
+J. Padhye, V. Firoiu, and D. Towsley, ``A stochastic model of TCP Reno congestion avoidance and control," Univ. of Massachusetts, Amherst, MA, CMPSCI Tech. Rep. 99-02, 1999.
+\bibitem{}
+Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specification, IEEE Std. 802.11, 1997.
+\end{thebibliography}
+% biography section
+% 
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{biography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% where an .eps filename suffix will be assumed under latex, and a .pdf suffix
+% will be assumed for pdflatex; or if you just want to reserve a space for
+% a photo:
+
+%\begin{biography}{Michael Shell}
+%Biography text here.
+%\end{biography}
+
+% if you will not have a photo at all:
+%\begin{biographynophoto}{John Doe}
+%Biography text here.
+%\end{biographynophoto}
+
+% insert where needed to balance the two columns on the last page
+%\newpage
+
+%\begin{biographynophoto}{Jane Doe}
+%Biography text here.
+%\end{biographynophoto}
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+%\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+% that's all folks
+\end{document}
+
+

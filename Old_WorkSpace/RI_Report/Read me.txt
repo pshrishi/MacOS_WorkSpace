@@ -1,0 +1,15 @@
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+To run this template, make sure that the class file "IEEEtran.cls" file is in 
+same folder where your ".tex" file is saved.
+
+Use "LaTex=>PDF" compiler.
+
+Put all figures that you want to insert in your report, are in the same folder. How to insert figures in the report is explained in "IEEEtran_HOWTO.pdf" file and is also explained in the template file.
+
+Make sure that your figure must be either in ".jpg" or in ".png" format. 
+
+All Information regarding commands are given "IEEEtran_HOWTO.pdf" file.
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

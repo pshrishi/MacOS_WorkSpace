@@ -1,0 +1,15 @@
+﻿<Window x:Class="BTP.LeapScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LeapScreen" Height="786" Width="1366" WindowState="Maximized">
+    <Grid>
+        <Image Name="ch1" Source="images/ch1.jpg" MouseDown="ch1_MouseDown_1" HorizontalAlignment="Left" Height="166" Margin="10,10,0,0" VerticalAlignment="Top" Width="466"/>
+        <Image Name="ch2" Source="images/ch2.jpg" MouseDown="ch2_MouseDown_1" HorizontalAlignment="Left" Height="166" Margin="10,181,0,0" VerticalAlignment="Top" Width="466"/>
+        <Image Name="ch3" Source="images/ch3.jpg" MouseDown="ch3_MouseDown_1" HorizontalAlignment="Left" Height="166" Margin="10,352,0,0" VerticalAlignment="Top" Width="466"/>
+        <Image Name="ch4" Source="images/ch4.jpg" MouseDown="ch4_MouseDown_1" HorizontalAlignment="Left" Height="166" Margin="10,523,0,0" VerticalAlignment="Top" Width="466"/>
+        <Image Name="ch5" Source="images/ch5.jpg" MouseDown="ch5_MouseDown_1" HorizontalAlignment="Left" Height="166" Margin="481,10,0,0" VerticalAlignment="Top" Width="466"/>
+        <Image Name="ch6" Source="images/ch6.jpg" MouseDown="ch6_MouseDown_1" HorizontalAlignment="Left" Height="166" Margin="481,181,0,0" VerticalAlignment="Top" Width="466"/>
+        <Image Name="ch7" Source="images/ch7.jpg" MouseDown="ch7_MouseDown_1" HorizontalAlignment="Left" Height="166" Margin="481,352,0,0" VerticalAlignment="Top" Width="466"/>
+
+    </Grid>
+</Window>

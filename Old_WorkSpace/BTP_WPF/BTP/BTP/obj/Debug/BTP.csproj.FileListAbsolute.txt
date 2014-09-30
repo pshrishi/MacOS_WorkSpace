@@ -1,0 +1,66 @@
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\bin\Debug\BTP.exe.config
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\bin\Debug\BTP.exe
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\bin\Debug\BTP.pdb
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.csprojResolveAssemblyReference.cache
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\App.g.cs
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP_MarkupCompile.cache
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.g.resources
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.Properties.Resources.resources
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.csproj.GenerateResource.Cache
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.exe
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.pdb
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\LeapScreen.baml
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\LeapScreen.g.cs
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\TutScreen.baml
+C:\Users\Hiren\Desktop\BTP WPF\BTP\BTP\obj\Debug\TutScreen.g.cs
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\bin\Debug\BTP.exe.config
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\BTP.exe
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\BTP.pdb
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\bin\Debug\BTP.exe
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\bin\Debug\BTP.pdb
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\BTP.csprojResolveAssemblyReference.cache
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\LeapScreen.baml
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\QuizScreen.baml
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\TutScreen.baml
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\LeapScreen.g.cs
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\QuizScreen.g.cs
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\TutScreen.g.cs
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\App.g.cs
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\BTP_MarkupCompile.cache
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\BTP.g.resources
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\BTP.Properties.Resources.resources
+C:\Users\Hiren\Desktop\BTP Folder\BTP WPF\BTP\BTP\obj\Debug\BTP.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\bin\Debug\BTP.exe.config
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.exe
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.pdb
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\bin\Debug\BTP.exe
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\bin\Debug\BTP.pdb
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\LeapScreen.baml
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\QuizScreen.baml
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\TutScreen.baml
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\LeapScreen.g.cs
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\QuizScreen.g.cs
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\TutScreen.g.cs
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\App.g.cs
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP_MarkupCompile.cache
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.g.resources
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.Properties.Resources.resources
+C:\Users\Admin\Desktop\BTP WPF\BTP\BTP\obj\Debug\BTP.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\bin\Debug\BTP.exe.config
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\BTP.exe
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\BTP.pdb
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\bin\Debug\BTP.exe
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\bin\Debug\BTP.pdb
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\BTP.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\LeapScreen.baml
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\QuizScreen.baml
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\TutScreen.baml
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\LeapScreen.g.cs
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\QuizScreen.g.cs
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\TutScreen.g.cs
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\App.g.cs
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\BTP_MarkupCompile.cache
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\BTP.g.resources
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\BTP.Properties.Resources.resources
+C:\Users\Admin\Desktop\BTP_WPF\BTP\BTP\obj\Debug\BTP.csproj.GenerateResource.Cache

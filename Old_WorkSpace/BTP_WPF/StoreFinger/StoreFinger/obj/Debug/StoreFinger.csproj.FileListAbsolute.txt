@@ -1,0 +1,12 @@
+C:\Users\Hiren\Desktop\BTP WPF\StoreFinger\StoreFinger\bin\Debug\StoreFinger.exe.config
+C:\Users\Hiren\Desktop\BTP WPF\StoreFinger\StoreFinger\obj\Debug\StoreFinger.csprojResolveAssemblyReference.cache
+C:\Users\Hiren\Desktop\BTP WPF\StoreFinger\StoreFinger\bin\Debug\StoreFinger.exe
+C:\Users\Hiren\Desktop\BTP WPF\StoreFinger\StoreFinger\bin\Debug\StoreFinger.pdb
+C:\Users\Hiren\Desktop\BTP WPF\StoreFinger\StoreFinger\obj\Debug\StoreFinger.exe
+C:\Users\Hiren\Desktop\BTP WPF\StoreFinger\StoreFinger\obj\Debug\StoreFinger.pdb
+C:\Users\Admin\Desktop\BTP WPF\StoreFinger\StoreFinger\bin\Debug\StoreFinger.exe.config
+C:\Users\Admin\Desktop\BTP WPF\StoreFinger\StoreFinger\obj\Debug\StoreFinger.exe
+C:\Users\Admin\Desktop\BTP WPF\StoreFinger\StoreFinger\obj\Debug\StoreFinger.pdb
+C:\Users\Admin\Desktop\BTP WPF\StoreFinger\StoreFinger\bin\Debug\StoreFinger.exe
+C:\Users\Admin\Desktop\BTP WPF\StoreFinger\StoreFinger\bin\Debug\StoreFinger.pdb
+C:\Users\Admin\Desktop\BTP WPF\StoreFinger\StoreFinger\obj\Debug\StoreFinger.csprojResolveAssemblyReference.cache
