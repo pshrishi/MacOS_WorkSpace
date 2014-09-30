@@ -1,0 +1,8 @@
+This folder has 6 files and you are reading the README file.
+
+1) crfModelTrain and crfModelTest are two shell scripts use to train an already installed crf++ software. You can search "crf++" on google to get to crf++'s homepage.
+2) DevelopTrainData.java is the file containing code to read an input tagged raw text to a feature vector representation text file. The feature vector representation contains each token, with its associated features seperated by tabs, on a new line.
+3) FeatureVectorGenerator.java is the file where you can define your features and depending on the token return an appropriate feature vector to DevelopTrainData.java
+4) DevelopTaggedOutputVariant.java contains the code to convert back from the feature vector representation of text to normal running text. This can be used once the tagging is done by a trained classifier and you want to convert to the raw tagged text form for evaluation.
+
+

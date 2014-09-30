@@ -1,0 +1,57 @@
+// Get all unread emails 
+function getEmails() {
+  Logger.log('Active user : ' + Session.getUser().getEmail());
+  var threads = GmailApp.search('in:inbox is:unread');
+  Logger.log('Number of threads : ' + threads.length );
+  var spreadSheets = DocsList.getFilesByType(DocsList.FileType.SPREADSHEET);
+  var file = 0;
+  for(var i=0; i<spreadSheets.length; i++)
+  {
+    if(spreadSheets[i].getName() == 'Unread Emails')
+    {
+      file = spreadSheets[i].getId();
+      break;
+    }
+  }
+  Logger.log('File ID : ' + file );
+  
+  var sprdSht;
+  if(file == 0)
+  {
+    sprdSht = SpreadsheetApp.create('Unread Emails');
+  }
+  else
+  {
+    sprdSht = SpreadsheetApp.openById(file);
+    //Assumption that there aren't more than 1000 rows(unread emails)
+    sprdSht.getActiveSheet().clear();
+  }
+  
+  sprdSht.appendRow(['Id', 'From', 'Subject', 'Content']);  
+  
+  for(var i=0; i<threads.length; i++)
+  {
+    var messages = threads[i].getMessages();
+    Logger.log('Number of messages in thread : ' + messages.length);
+    for(var j=0; j<messages.length; j++)
+    {
+      if(messages[j].getFrom().indexOf(Session.getUser().getEmail()) != -1)
+      continue;
+      else
+      {
+        var html = messages[j].getBody();
+        
+        //html = html.split(" ");
+        /*html=html.replace(/<\/div>/ig, '\n');
+        html=html.replace(/<\/li>/ig, '\n');
+        html=html.replace(/<li>/ig, '  *');
+        html=html.replace(/<\/ul>/ig, '\n');
+        html=html.replace(/<\/p>/ig, '\n');
+        html=html.replace(/<br\/?>/ig, '\n');
+        html=html.replace(/<[^>]+>/ig, '');*/
+        sprdSht.appendRow([messages[j].getId(), messages[j].getFrom(), messages[j].getSubject(), html]);
+        //messages[j].
+      }
+    }
+  }
+ }
